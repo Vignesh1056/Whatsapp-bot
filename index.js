@@ -14,7 +14,20 @@ app.post('/whatsapp', (req, res) => {
     twiml.message('Hey 👋! Welcome to my WhatsApp bot 🚀');
   } else if (msg === 'menu') {
     twiml.message('Options:\n1) Help\n2) Info\n3) Exit');
-  } else {
+  }
+    else if (msg==1){
+      twiml.message('How can i help you?')
+
+      if(msg== 'help'){
+        twiml.message('Oops')
+      }
+      else{
+        twiml.message('Go to hell')
+      }
+
+  }
+
+  else {
     twiml.message("Sorry, I didn’t understand. Try 'hi' or 'menu'.");
   }
 
